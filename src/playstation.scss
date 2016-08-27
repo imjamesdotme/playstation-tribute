@@ -1,0 +1,169 @@
+.playstation {
+  position: relative;
+}
+
+.side {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 275px;
+  width: 115px;
+  background-color: $grey;
+  border-radius: 5px;
+  border-color: $black;
+  border-width: 3px;
+  border-style: solid;
+
+  &.left {
+    margin-right: -7px;
+  }
+
+  &.right {
+    margin-left: -8px;
+  }
+}
+
+.middle {
+  position: relative;
+  top: -4px;
+  display: inline-block;
+  height: 260px;
+  width: 200px;
+  background-color: $grey;
+  border-radius: 5px;
+  border-color: $black;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.circle {
+  border-radius: 50%;
+  border-color: $black;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.left .line {
+  position: relative;
+  top: 140px;
+  height: 20px;
+  width: 3px;
+  background-color: $black;
+  margin: 0 auto;
+}
+
+.reset-button {
+  @extend .circle;
+  position: relative;
+  top: 130px;
+  left: 20px;
+  height: 30px;
+  width: 30px;
+
+  &:after {
+    content: "RESET";
+    position: absolute;
+    top: 11px;
+    left: 5px;
+    font-size: 6px;
+  }
+}
+
+.power-button {
+  @extend .circle;
+  position: relative;
+  top: 140px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+
+  &:after {
+    content: "POWER";
+    position: absolute;
+    top: 30px;
+    left: 18px;
+    font-size: 10px;
+  }
+}
+
+.disc-tray {
+  @extend .circle;
+  position: relative;
+  top: 5px;
+  left: -23px;
+  height: 240px;
+  width: 240px;
+  background-color: $grey;
+  z-index: 1;
+}
+
+.grip {
+  position: relative;
+  top: 55px;
+  left: 155px;
+  transform: rotate(-60deg);
+}
+
+.dots {
+  @extend .circle;
+  height: 1px;
+  width: 1px;
+  border-width: 2px;
+  background-color: $black;
+
+  &::before, &::after {
+    @extend .circle;
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    border-width: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    top: 0;
+    left: -10px;
+  }
+
+  &::after {
+    top: 0;
+    left: 10px;
+  }
+
+  &:nth-child(2) {
+    margin-top: 5px;
+
+    &::before, &::after {
+      margin-top: 10px;
+    }
+  }
+}
+
+.open-button {
+  @extend .circle;
+  position: relative;
+  top: 177px;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+
+  &:after {
+    content: "OPEN";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 10px;
+  }
+}
+
+.right .line {
+  position: relative;
+  top: 105px;
+  left: -42px;
+  height: 20px;
+  width: 3px;
+  background-color: $black;
+  margin: 0 auto;
+  transform: rotate(-55deg);
+}

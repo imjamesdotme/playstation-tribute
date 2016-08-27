@@ -1,0 +1,16 @@
+// Colours
+$grey: #ccc;
+$black: #333;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Helvetica', arial, sans-serif;
+  background: linear-gradient(135deg, #fff, $grey);
+}
+
+body {
+  margin: 0;
+}
+
+@import 'playstation';
