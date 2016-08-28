@@ -6,22 +6,29 @@ html(lang="en")
       meta(name="viewport" content="width=device-width, initial-scale=1")
       title Playstation Tribute | I'm James
       link(href="styles.css" rel="stylesheet" type="text/css")
-      meta(name="theme-color" content="#F44336")
+      meta(name="theme-color" content="#eee")
         
     body
       main
-        .playstation
-          .side.left
-            .reset-button
-            .power-button
-            .line
-          .middle
-            .disc-tray
-              .grip
-                .dots
-                .dots
-          .side.right
-            .open-button
-            .line
-          
-      script(src="main.js" type="text/javascript")
+        .container
+          .playstation
+            .side.left
+              .reset-button
+              .power-button
+              .line
+            .middle
+              .disc-tray
+                img(src="images/sony-logo.png" class="sony-logo" alt="Sony Logo")
+                img(src="images/playstation-logo.png" class="playstation-logo" alt="Orignal Playstation Logo")
+                .grip
+                  .dots
+                  .dots
+            .side.right
+              .open-button
+              .line
+                
+          h1 For the players since 1995.
+          a(href="https://www.youtube.com/watch?v=wZkMdi3XBhw" title="Playstation - For the players since 1995" target="_blank") Watch the video.
+          hr
+          p Tribute to the Playstation brand with CSS by I'm James.
+        

@@ -1,16 +1,67 @@
 // Colours
 $grey: #ccc;
 $black: #333;
+$turquoise: #33cccc;
+$blue: #66ccff;
 
 html, body {
   height: 100%;
   width: 100%;
-  font-family: 'Helvetica', arial, sans-serif;
-  background: linear-gradient(135deg, #fff, $grey);
 }
 
 body {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
   margin: 0;
+  color: $black;
+  background: -webkit-linear-gradient(top left, #fff, $grey);
+  background: -o-linear-gradient(top left, #fff, $grey);
+  background: linear-gradient(to bottom right, #fff, $grey);
 }
 
+.container {
+  max-width: 960px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 75px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: lighten($black, 20%);
+  }
+}
+
+hr {
+  height: 1px;
+  max-width: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: $black;
+  border: none;
+}
+
+@media (min-width: 767px) {
+  main .playstation {
+    transform: scale(1);
+    transform-origin: 0;
+    margin-bottom: 50px;
+  }
+}
+
+// Partials
 @import 'playstation';
